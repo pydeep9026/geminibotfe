@@ -43,7 +43,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     { 
       sender: 'bot', 
-      text: "Hello! I'm your CME knowledge assistant. How can I help you today?\n\nYou can ask me things like:\n- **How to install softwarex**\n- **Softwarex configuration**\n- **Remedy ticket procedures**"
+      text: "Hello! I'm your CME knowledge assistant. How can I help you today?\n\nYou can ask me things like:\n- **How to install softwarex**\n- **Softwarex configuration**\n- **Solution for SoftwareX configuration issues**"
     }
   ]);
   const [input, setInput] = useState('');
