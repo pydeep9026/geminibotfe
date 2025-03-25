@@ -151,7 +151,7 @@ export default function Chatbot() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about CME processes, guides, or solutions..."
+            placeholder="Ask about xyz processes, guides, or solutions..."
             className={`flex-1 rounded-full ${darkMode ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' : 'border-gray-300'} border px-4 py-2 focus:outline-none focus:ring-2 ${darkMode ? 'focus:ring-blue-500' : 'focus:ring-blue-500'}`}
           />
           <button
