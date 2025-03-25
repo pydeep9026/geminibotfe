@@ -43,7 +43,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     { 
       sender: 'bot', 
-      text: "Hello! I'm your CME knowledge assistant. How can I help you today?\n\nYou can ask me things like:\n- **How to install softwarex**\n- **Softwarex configuration**\n- **Solution for SoftwareX configuration issues**"
+      text: "Hello! I'm your xyz knowledge assistant. How can I help you today?\n\nYou can ask me things like:\n- **How to install softwarex**\n- **Softwarex configuration**\n- **Solution for SoftwareX configuration issues**"
     }
   ]);
   const [input, setInput] = useState('');
@@ -103,10 +103,10 @@ export default function Chatbot() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className={`w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold`}>
-              CME
+              xyz
             </div>
             <div>
-              <h1 className="font-bold text-lg">CME Knowledge Assistant</h1>
+              <h1 className="font-bold text-lg">xyz Knowledge Assistant</h1>
               <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Powered by Gemini AI</p>
             </div>
           </div>
