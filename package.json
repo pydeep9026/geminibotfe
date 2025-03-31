@@ -25,3 +25,65 @@
     "@eslint/eslintrc": "^3"
   }
 }
+
+
+const MessageBubble = ({ message, darkMode }) => {
+  return (
+    <div className={`message-container ${message.sender === 'user' ? 'user' : 'bot'}`}>
+      <div className={`message-bubble ${message.sender === 'user' ? 'user' : 'bot'} ${darkMode ? 'dark' : ''}`} 
+        style={{
+          padding: '12px 15px',
+          borderRadius: '8px',
+          maxWidth: '100%',
+          fontSize: '14px',
+          backgroundColor: message.sender === 'user'
+            ? (darkMode ? '#2b6cb0' : '#bfdbfe')
+            : (darkMode ? '#1a365d' : '#ecf0f1'),
+          color: message.sender === 'user' ? 'white' : (darkMode ? 'white' : 'black'),
+          overflowX: 'auto',
+          backdropFilter: 'blur(12px)',
+          WebKitBackdropFilter: 'blur(12px)',
+        }}>
+        
+        {/* Grok 3 Features - Hardcoded */}
+        <div style={{ marginBottom: '16px' }}>
+          <h3 style={{ margin: '0 0 10px 0' }}>Grok 3 (beta)</h3>
+          <p style={{ margin: '0 0 12px 0' }}>Try our new features:</p>
+          
+          <div style={{
+            padding: '12px',
+            borderRadius: '6px',
+            marginBottom: '10px',
+            backgroundColor: darkMode ? '#2d3748' : '#edf2f7',
+            borderLeft: `4px solid ${darkMode ? '#4299e1' : '#3182ce'}`
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <input type="checkbox" readOnly style={{ marginRight: '10px' }} />
+              <strong>DeepSearch</strong>
+            </div>
+            <div style={{ paddingLeft: '24px', fontSize: '0.9em', marginTop: '4px' }}>
+              Search deeply to deliver detailed, well-reasoned answers with Grok's rapid, agentic search.
+            </div>
+          </div>
+          
+          <div style={{
+            padding: '12px',
+            borderRadius: '6px',
+            backgroundColor: darkMode ? '#2d3748' : '#edf2f7',
+            borderLeft: `4px solid ${darkMode ? '#4299e1' : '#3182ce'}`
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <input type="checkbox" readOnly style={{ marginRight: '10px' }} />
+              <strong>Think</strong>
+            </div>
+            <div style={{ paddingLeft: '24px', fontSize: '0.9em', marginTop: '4px' }}>
+              Solve the hardest problems in math, science, and coding with our reasoning model.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MessageBubble;
